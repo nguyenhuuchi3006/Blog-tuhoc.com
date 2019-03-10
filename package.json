@@ -1,0 +1,25 @@
+{
+  "name": "blog-tuhoc.com",
+  "version": "1.0.0",
+  "description": "Blog website chủ đề tự học mọi thứ, xây dựng bằng node js (express) và mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenhuuchi3006/Blog-tuhoc.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenhuuchi3006/Blog-tuhoc.com/issues"
+  },
+  "homepage": "https://github.com/nguyenhuuchi3006/Blog-tuhoc.com#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.18"
+  }
+}

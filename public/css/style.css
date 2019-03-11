@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Amatic+SC');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=vietnamese');
 
 *{
     box-sizing: border-box;
@@ -132,6 +133,123 @@ body {
 
 }
 /* ---------end header------------- */
+.heading-first {
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0;
+}
+
+.line-heading {
+    color: #565050;
+    font-family: 'Amatic SC', cursive;
+    font-size: 21px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 28px;
+    padding-bottom: 26px;
+    background: url("../images/separator.png") no-repeat bottom;
+}
+/* ---------banner----------- */
+
+.banner {
+    background: url(../images/bg-light-green.jpg);
+    display: flex;
+    margin: 0 50px 100px 50px;
+    position: relative;
+}
+.banner:after {
+    content: "";
+    height: 34px;
+    background: url('../images/wave.png');
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 100%;
+}
+
+.banner h4{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    margin: 5px 0 30px 0;
+}
+.banner .left p{
+    font-size: 15px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 40px;
+}
+.banner .left .content {
+     margin-left: 30px;
+}
+.banner .left button {
+    width: 216px;
+    background: url('../images/order-btn.svg') no-repeat;
+    background-size: 100%;
+    font-size: 19px;
+    line-height: 54px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.banner .left button:hover {
+    color: #3e9776;
+    transition: 0.5s;
+}
+.banner .left {
+    display: flex;
+    padding: 70px 80px 30px 170px;
+}
+.banner .left .picture {
+    width: 230px;
+}
+
+.banner .left .picture img{
+    width: 230px;
+    box-shadow: 10px 9px 0px -3px #7a9e83d6;
+}
+.banner .right {
+    flex-basis: 52%;
+    padding: 20px 60px;
+    background: url(../images/bg-dark-green.jpg);
+    text-align: center;
+    color: #fff;
+}
+.banner .right p {
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* ---------end banner----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -----------footer-------------- */
 .footer {

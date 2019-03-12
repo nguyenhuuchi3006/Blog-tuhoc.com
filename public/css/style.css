@@ -472,3 +472,136 @@ a.btn {
     margin: 0 5px;
 }
 /* ------------end footer------------ */
+
+
+
+
+
+
+/* --------page post----------- */
+
+
+.post-intro{
+    background: url(../images/bg-beige.jpg);
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 70px 80px 40px 80px;
+
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+
+}
+.post-intro::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/wave.png);
+    width: 100%;
+    height: 34px;
+}
+.post-intro .header{
+    padding-right: 200px;
+    position: relative;
+}
+.post-intro .header h1{
+    margin: 0 0 20px 0;
+    font-size: 46px;
+    line-height: 50px;
+}
+.post-intro img{
+    width:100%;
+    height: 100%;
+}
+.post-intro .header .date{
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/date-arrow.png) no-repeat;
+    text-align: right;
+    padding: 12px 0 12px 32px;
+}
+.post-intro .header .date .actual-date{
+    color: #f53145;
+    text-transform: uppercase;
+}
+.post-intro .comment-count{
+    position: absolute;
+    top: 75px;
+    left: -8px;
+
+
+    width: 65px;
+    height: 40px;
+    background: #f53145 url('../images/comment.svg') no-repeat 10px 11px;
+
+}
+.post-intro p.by{
+    position: absolute;
+    bottom: -54px;
+    left: 14%;
+    background: #f53145;
+    color: #fff;
+    width: 800px;
+    padding: 13px 0 13px 31px;
+    font-style: italic;
+    font-size: 16px;
+}
+.post-intro p.by a{
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-style: normal;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* content */
+
+.entry-content {
+    font-family: 'Fira Sans', sans-serif;
+    max-width: 800px;
+    margin: 70px 290px;
+}
+img{
+    width: 100%;
+}
+.entry-content p{
+    line-height: 1.8625;
+    font-size: 18px;
+}
+.entry-content p a{
+    color: red;
+    text-decoration: none;
+}
+.entry-content h2{
+    font-weight: 700;
+    font-size: 28px;
+    color: #fd0808;
+}
+.entry-content ol {
+    list-style: none;
+    counter-reset: li;
+    font-size: 17px;
+}
+.entry-content li::before {
+    content: counter(li);
+     color: red;
+    display: inline-block;
+     width: 1em;
+     padding-right: 10px;
+     margin-left: -26px;
+}
+.entry-content li{
+    counter-increment: li;
+    padding-bottom: 15px;
+
+}
+
+
+/* page home */
+.post{
+    background: none;
+}

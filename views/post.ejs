@@ -1,0 +1,37 @@
+<%- include('partials/header'); -%>
+
+<div class="post-intro">
+    <div class="header">
+        <h1>Điều gì xảy ra khi gõ một đường dẫn lên browser</h1>
+        <div class="date">Posted on<div class="actual-date">FEB 4, 2019</div></div>
+    </div>
+    <img src="/images/bg_gourl.png" alt="bi kip vo cong">
+    <div class="comment-count"></div>
+    <p class="by">by <a href="fb.com/chi.barca.5">Ace Chung chí hướng</a></p>
+</div>
+<div class="entry-content">
+    <p>"Điều gì xảy ra khi gõ một đường dẫn web?". Đó là câu hỏi thường được hỏi khi phỏng vấn. Có thể có các câu trả lời khác nhau tùy theo mức độ hiểu biết về <a href="#">HTTP</a>, <a href="#">DNS</a>,... nhưng phải hiểu cách mà browser (trình duyệt web), server và mạng internet làm việc cùng nhau như thế nào.
+    </p>
+    <img src="/images/url_browser.jpg" alt="url-browser">
+    <h2>So, what happen exactly?</h2>
+    <p>Bạn gõ một đường dẫn (google.com) lên trình duyệt Opera:</p>
+    <ol>
+        <li>Browser sẽ mang tên miền (google.com) đến DNS, sau đó tìm chính xác địa chỉ server thực mà website đó sử dụng</li>
+        <li>Browser gửi một HTTP request đến server</li>
+        <li>Server nhận được request sẽ gửi lại một HTTP response (chỉ chứa file html)</li>
+        <li>Browser đọc file html này. Khi nào cần gì (ví dụ như ảnh, video, file css, ...) thì gửi request đến server, server nhận được thì gửi lại response tương ứng</li>
+        <li>Khi load xong một trang web thì Browser có thể gửi thêm các requests async khi cần</li>
+    </ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer'); -%>

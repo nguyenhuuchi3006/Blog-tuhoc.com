@@ -605,3 +605,8 @@ img{
 .post{
     background: none;
 }
+
+.wrapper {
+    width: 950px;
+    margin: 50px auto;
+}

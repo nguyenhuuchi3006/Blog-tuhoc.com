@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 var _ = require('lodash');
+
+const port = 3000;
 
 
 app.set('view engine', 'ejs');
@@ -14,43 +15,64 @@ app.use(bodyParser.urlencoded({
 
 
 // ----------install database-----
-mongoose.connect('mongodb://localhost:27017/blog-tuhoc', {
+mongoose.connect('mongodb://localhost:27017/blogtuhoc', {
     useNewUrlParser: true
 });
 
 const postSimple = {
     title: String,
-    content: String
+    content: String,
+    imageUrl: String
 }
 
 const PostSimple = mongoose.model("PostSimple", postSimple);
 
-
-
-
+// ------------------------------------
+         
 app.get('/', (req, res) => {
-    const test = _.kebabCase('Điều gì xảy ra khi gõ một đường dẫn lên browser');
 
-    res.render("index", {
-        test: test
-    });
+    PostSimple.find((err, posts) => {
+        res.render("index", {
+            posts: posts
+        })
+    })
+
+    
 });
 
 
-app.get('/post', (req,res)=>{
+app.get('/post', (req, res)=>{
     res.render("post");
 });
 
-app.get('/post/:postName', (req,res) => {
-    const postName = req.params.postName;
-    //_.kebabCase(postName)
-    res.render("post");
+
+app.get('/post/:postID', (req,res) => {
+    
+    const requestedPostID = req.params.postID;
+    PostSimple.findOne({_id: requestedPostID}, (err, post) => {
+        res.render("post", {
+            post: post
+        });
+    })
 
 });
 
+app.get('/compose', (req,res) => {
+    res.render("compose");
+})
+
+app.post('/compose', (req, res) => {
+
+    const post = new PostSimple({
+        title: req.body.postTitle,
+        content: req.body.postBody,
+        imageUrl: req.body.postImage
+    })
+    post.save();
+    res.redirect("/");
 
 
-
+})
 
 
 

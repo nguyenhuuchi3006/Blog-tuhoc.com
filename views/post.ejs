@@ -1,5 +1,6 @@
 <%- include('partials/header'); -%>
 
+
 <div class="post-intro">
     <div class="header">
         <h1><%= post.title %></h1>
@@ -10,7 +11,10 @@
     <p class="by">by <a href="fb.com/chi.barca.5">Ace Chung chí hướng</a></p>
 </div>
 <div class="entry-content">
-    <p><%= post.content %></p>
+    <% post.content.split("\n").map(para => { %>
+        <p><%= para %></p>
+    <% }) %>
+    
     
 </div>
 
